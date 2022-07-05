@@ -1,0 +1,18 @@
+.card-button {
+    min-height: 100px;
+    border: 0.5px solid #3880ff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 15px;
+}
+
+.inside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    text-align: center;
+    align-items: center;
+}

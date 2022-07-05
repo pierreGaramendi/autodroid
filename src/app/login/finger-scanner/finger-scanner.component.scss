@@ -1,0 +1,24 @@
+ion-icon {
+    font-size: 128px;
+  }
+
+
+.text-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    text-align: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.finger-container{
+    padding: 10px;
+    border: solid;
+    border-radius: 50%;
+}
+
+.mensaje{
+    margin-top: 10px;
+}

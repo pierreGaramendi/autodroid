@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-button (click)="cancel()">Atrás</ion-button>
+        </ion-buttons>
+        <ion-title>Escanear Huella</ion-title>        
+    </ion-toolbar>
+</ion-header>
+<ion-content>    
+    <ion-item color="primary">
+        <ion-label>Coloque el dedo en el sensor</ion-label>        
+    </ion-item>
+    <div class="text-center">
+        <div class="finger-container">
+            <ion-icon name="finger-print-outline"></ion-icon>    
+        </div>        
+        <ion-label class="mensaje">Volver a Escanear Huella</ion-label>   
+    </div>    
+</ion-content>
+<ion-footer collapse="fade">
+    <ion-button  (click)="cancel()" expand="block" >Continuar</ion-button>
+    <!-- <ion-toolbar>
+        <div class="text-center">
+            <ion-note>Al continuar estoy aceptando los </ion-note>
+            <ion-note color="primary">Terminos y Condiciones</ion-note>
+        </div>
+    </ion-toolbar> -->
+</ion-footer>

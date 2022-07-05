@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-button (click)="cancel()">Atras</ion-button>
+        </ion-buttons>
+        <ion-title>Reconocimiento Facial</ion-title>        
+    </ion-toolbar>
+</ion-header>
+<ion-content>    
+    <ion-item color="primary">
+        <ion-label>Coloque el rostro dentro del circulo</ion-label>        
+    </ion-item>
+    <div class="text-center">
+        
+            <img  class="image-face" [src]="imageSrc" [alt]="imageAlt" />
+            <ion-label>Volver a Escanear Rostro</ion-label>   
+    </div>    
+</ion-content>
+<ion-footer collapse="fade">
+
+    <ion-button  (click)="cancel()" expand="block" >Continuar</ion-button>
+    <!-- <ion-toolbar>
+        <div class="text-center">
+            <ion-note>Al continuar estoy aceptando los </ion-note>
+            <ion-note color="primary">Terminos y Condiciones</ion-note>
+        </div>
+    </ion-toolbar> -->
+</ion-footer>

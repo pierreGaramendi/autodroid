@@ -1,0 +1,79 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-button (click)="cancel()">atrás</ion-button>
+        </ion-buttons>
+        <ion-title>Nuevo Vehiculo</ion-title>
+        <!-- <ion-buttons slot="end">
+            <ion-button (click)="cancel()" [strong]="true">Confirm</ion-button>
+        </ion-buttons> -->
+    </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+    <ion-item>
+        <ion-label position="stacked">Numero de Placa</ion-label>
+        <ion-input type="text" [(ngModel)]="placa"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Titular de Vehiculo</ion-label>
+        <ion-input type="text" [(ngModel)]="titular"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Marca</ion-label>
+        <ion-select value="1" interface="action-sheet">
+            <ion-select-option value="1">Toyota Yaris Sedan 2021</ion-select-option>
+            <ion-select-option value="2">Hyundai Accent 2020</ion-select-option>
+            <ion-select-option value="3">Kia Rio 2018</ion-select-option>
+            <ion-select-option value="4">Chevrolet Onix 2021</ion-select-option>
+            <ion-select-option value="5">Nissan Sentra 2020</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>Tipo de Combustible</ion-label>
+    </ion-item>
+    <ion-radio-group value="biff">
+        <ion-item>
+            <ion-label>Gasolina</ion-label>
+            <ion-radio slot="start" value="biff"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Diesel</ion-label>
+            <ion-radio slot="start" value="griff"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>GLP</ion-label>
+            <ion-radio slot="start" value="glp"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>GNV</ion-label>
+            <ion-radio slot="start" value="gnv"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Electrico</ion-label>
+            <ion-radio slot="start" value="electrico"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Hibrido</ion-label>
+            <ion-radio slot="start" value="hibrido"></ion-radio>
+        </ion-item>
+    </ion-radio-group>
+    <ion-item>
+        <ion-button (click)="beginSync()" expand="full">INICIAR SINCRONIZACION</ion-button>
+        <ng-template [ngIf]="showSpiner">
+            <ion-spinner ></ion-spinner>
+        </ng-template>
+        <ng-template [ngIf]="!showSpiner">
+            <ion-badge *ngIf="isSync" slot="end" color="success">Sincronizado!</ion-badge>
+            <ion-badge *ngIf="!isSync" slot="end" color="danger">No sincronizado</ion-badge>
+        </ng-template>        
+    </ion-item>
+    <ion-button  expand="block" (click)="cancel()">Guardar Vehiculo</ion-button>
+</ion-content>
+<!-- <ion-footer collapse="fade">
+    <ion-toolbar>
+        <div class="text-center">
+            <ion-note>Al continuar estoy aceptando los </ion-note>
+            <ion-note color="primary">Terminos y Condiciones</ion-note>
+        </div>
+    </ion-toolbar>
+</ion-footer> -->

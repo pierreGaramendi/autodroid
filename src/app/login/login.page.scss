@@ -1,0 +1,31 @@
+
+.text-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.text-center-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+.px-5{
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+}
+
+.image-auto{
+    height: 140px;
+    width: 140px;
+}
+
+.tittle{
+    font-size: 62px;
+    color: #3c6afe;
+}
